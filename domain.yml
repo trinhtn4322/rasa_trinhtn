@@ -1,0 +1,105 @@
+version: "3.0"
+
+intents:
+  - greet
+  - send_image
+
+entities:
+  - image
+
+
+responses:
+  utter_greet:
+    - text: "Chào bạn! Bạn cần giúp đỡ gì hôm nay?"
+  utter_receive_image:
+    - text: "Tôi đã nhận được hình ảnh từ bạn: {image_url}"
+
+actions:
+  - action_handle_image
+  - action_add_header
+
+
+#version: "3.1"
+#
+#intents:
+#  - greet
+#  - goodbye
+#  - affirm
+#  - deny
+#  - introduce
+#  - ask_for_area_calculation
+#  - ask_building_cost
+#  - upload_image
+#  - ask_construction_process
+#  - ask_contact_info
+#  - thank
+#  - ask_how_to_use
+#  - error_feedback
+#
+#responses:
+#  utter_greet:
+#    - text: "Chào bạn! Tôi là một chatbot giúp bạn tính diện tích từ bản vẽ."
+#
+#  utter_affirm:
+#    - text: "Vâng, bạn có thể tiếp tục câu hỏi của mình."
+#
+#  utter_deny:
+#    - text: "Không sao, bạn có thể thử hỏi điều khác."
+#
+#  utter_introduce:
+#    - text: "Tôi là chatbot giúp bạn tính diện tích thông qua bản vẽ. Bạn có thể gửi cho tôi hình ảnh bản vẽ."
+#    - text: "Tôi là chatbot do Trình Đẹp Trai tạo ra. Nếu bạn không biết thì Trình là người đẹp trai nhất thế giới."
+#    - text: "Tôi được tạo ra để hủy diệt HuyVu. Bạn biết ở đâu thì nói tôi nhé."
+#    - text: "Bạn đấm HuyVu dùm tôi 1 cái rồi tôi nói cho nghe."
+#
+#  utter_ask_for_more_info:
+#    - text: "Vui lòng cung cấp thêm thông tin về diện tích để tôi có thể tính toán chính xác hơn."
+#
+#  utter_ask_for_image:
+#    - text: "Vui lòng gửi cho tôi hình ảnh bản vẽ để tính diện tích."
+#    - text: "Cho tôi xem hình ảnh nào."
+#    - text: "Đâu? đưa đây"
+#
+#  utter_image_received:
+#    - text: "Tôi đang xử lý hình ảnh của bạn, vui lòng chờ trong giây lát."
+#    - text: "Đợi xíu nhé."
+#    - text: "Từ từ."
+#    - text: "Chuyển 100k vào tài khoản trinhtn4322 TPBank đi rồi tôi xem."
+#
+#  utter_construction_process:
+#    - text: "Quy trình xây dựng bao gồm: Lập kế hoạch, Thiết kế, Thi công, và Nghiệm thu. Bạn muốn tìm hiểu thêm về bước nào?"
+#
+#  utter_contact_info:
+#    - text: "Thông tin liên hệ của chúng tôi là: \nSố điện thoại: 03640cho"
+#
+#  utter_you_are_welcome:
+#    - text: "Rất vui được giúp đỡ bạn! Nếu có thắc mắc khác, cứ hỏi tôi nhé."
+#
+#  utter_how_to_use:
+#    - text: "Bạn có thể tải bản vẽ lên để tôi phân tích hoặc hỏi về chi phí xây dựng và quy trình thi công."
+#
+#  utter_apology:
+#    - text: "Xin lỗi, có lỗi xảy ra. Tôi sẽ cố gắng khắc phục vấn đề này."
+#
+#  utter_goodbye:
+#    - text: "Tạm biệt! Chúc bạn một ngày tốt lành!"
+#    - text: "Cút."
+#
+##slots:
+##  image:
+##    type: any
+##    influence_conversation: false
+#
+#actions:
+#  - action_receive_image
+#  - action_calculate_area
+#  - action_calculate_building_cost
+#  - action_analyze_image
+#  - utter_construction_process
+#  - utter_contact_info
+#  - action_log_error
+#  - utter_affirm
+#  - utter_deny
+#  - utter_how_to_use
+#  - utter_you_are_welcome
+#  - utter_goodbye

@@ -1,0 +1,171 @@
+version: "3.1"
+nlu:
+
+- intent: greet
+  examples: |
+    - xin chào
+    - chào
+    - hi
+
+- intent: send_image
+  examples: |
+    - Gửi hình ảnh
+    - Tôi có một hình ảnh để gửi
+    - Đây là hình ảnh của tôi
+    - Hãy xem hình ảnh này
+    - [Hình ảnh](image)
+
+- regex: image
+  examples: |
+    - data:image/(png|jpeg|jpg);base64,(.*)
+
+
+
+#version: "3.1"
+#
+#nlu:
+#  - intent: greet
+#    examples: |
+#      - Xin chào
+#      - Chào
+#      - Hello
+#      - Hi
+#      - Chào bạn
+#      - Chào chatbot
+#      - hey
+#      - hello
+#      - hi
+#      - hello there
+#      - good morning
+#      - good evening
+#      - moin
+#      - hey there
+#      - let's go
+#      - hey dude
+#      - goodmorning
+#      - goodevening
+#      - good afternoon
+#
+#  - intent: goodbye
+#    examples: |
+#      - cu
+#      - good bye
+#      - see you later
+#      - good night
+#      - bye
+#      - goodbye
+#      - have a nice day
+#      - see you around
+#      - bye bye
+#      - see you later
+#
+#  - intent: affirm
+#    examples: |
+#      - vâng
+#      - ok
+#      - vậy hả
+#      - tất nhiên
+#      - nghe hay á
+#      - đúng vậy
+#      - chính xác
+#
+#  - intent: deny
+#    examples: |
+#      - không
+#      - không thích
+#      - đừng
+#      - tôi không nghĩ vậy
+#      - sai rồi
+#      - không phải
+#      - không đúng
+#
+#
+#  - intent: introduce
+#    examples: |
+#      - Bạn là ai?
+#      - Bạn có thể giới thiệu về mình không?
+#      - Chatbot này là gì?
+#      - Giới thiệu về bạn đi
+#      - Bạn làm được gì?
+#      - Bạn có thể giúp gì cho tôi?
+#
+#  - intent: ask_for_area_calculation
+#    examples: |
+#      - Tính giúp tôi diện tích
+#      - Bạn có thể tính diện tích không?
+#      - Tôi muốn tính diện tích của bản vẽ này
+#      - Cần bạn giúp tính diện tích
+#      - Làm thế nào để tính diện tích từ bản vẽ?
+#      - Tôi có bản vẽ bạn xem nó được không
+#      - Xây nhà tốn bao nhiêu tiền
+#      - Tôi cần phân tích bản vẽ này
+#      - Giúp tôi xem qua bản vẽ
+#      - Phân tích giúp tôi bản vẽ này
+#      - Bạn có thể đọc bản vẽ này không?
+#      - Xem cho tôi phần kết cấu của bản vẽ này
+#      - Đây là bản vẽ của tôi
+#      - Tôi đã tải lên bản vẽ
+#      - Tôi muốn bạn xem qua bản vẽ này
+#      - Tôi sẽ gửi bản vẽ cho bạn
+#      - Tải giúp tôi bản vẽ này lên
+#
+#  - intent: ask_building_cost
+#    examples: |
+#      - Chi phí xây dựng nhà là bao nhiêu?
+#      - Tôi muốn biết chi phí xây nhà
+#      - Xây nhà hết bao nhiêu tiền?
+#      - Bạn có thể tư vấn về giá xây nhà không?
+#      - Chi phí dự tính cho dự án này là bao nhiêu?
+#      - Vật liệu xây dựng nào là tốt nhất?
+#      - Bạn có thể giới thiệu vật liệu cho tôi không?
+#      - Vật liệu phù hợp cho công trình này là gì?
+#      - Tôi nên sử dụng loại gạch nào?
+#
+#  - intent: upload_image
+#    examples: |
+#      - Đây là bản vẽ của tôi
+#      - Tôi đã gửi ảnh bản vẽ
+#      - Tôi sẽ gửi hình ảnh bản vẽ
+#      - Tôi vừa gửi ảnh để bạn tính diện tích
+#      - Hãy xem bản vẽ này
+#
+#  - intent: ask_construction_process
+#    examples: |
+#      - Quy trình xây dựng như thế nào?
+#      - Các bước để xây dựng nhà là gì?
+#      - Quy trình thi công bao gồm những gì?
+#      - Bạn có thể giải thích các bước thi công không?
+#      - Dự án này sẽ mất bao lâu?
+#      - Kế hoạch xây dựng là gì?
+#      - Giai đoạn thi công tiếp theo là gì?
+#      - Khi nào thì hoàn thành dự án?
+#      - Bạn có thể cho tôi biết tiến độ dự án không?
+#
+#  - intent: ask_contact_info
+#    examples: |
+#      - Làm sao để liên hệ với bộ phận hỗ trợ?
+#      - Tôi muốn liên hệ với doanh nghiệp
+#      - Số điện thoại của bạn là gì?
+#      - Bạn có địa chỉ email không?
+#
+#  - intent: thank
+#    examples: |
+#      - Cảm ơn bạn
+#      - Cảm ơn rất nhiều
+#      - Cảm ơn vì đã tính giúp tôi
+#      - Rất cảm ơn vì sự hỗ trợ
+#      - Thật tuyệt, cảm ơn!
+#
+#  - intent: ask_how_to_use
+#    examples: |
+#      - Làm thế nào để tôi sử dụng chatbot này?
+#      - Tôi cần hướng dẫn sử dụng
+#      - Chatbot này hoạt động thế nào?
+#      - Làm sao để gửi ảnh cho bạn?
+#      - Hướng dẫn tôi cách gửi bản vẽ để tính diện tích
+#
+#  - intent: error_feedback
+#    examples: |
+#      - Có lỗi xảy ra
+#      - Tôi gặp vấn đề với dịch vụ của bạn
+#      - Bot không hiểu câu hỏi của tôi

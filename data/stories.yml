@@ -1,0 +1,118 @@
+version: "3.0"
+
+stories:
+- story: greet user
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: receive image
+  steps:
+  - intent: send_image
+  - action: action_handle_image
+
+- story: Add custom header
+  steps:
+    - action: action_add_header
+    - action: utter_greet
+
+
+#version: "3.1"
+#
+#stories:
+#  # Câu chuyện chào hỏi
+#  - story: greet_user
+#    steps:
+#      - intent: greet
+#      - action: utter_greet
+#
+#  # Câu chuyện giới thiệu chatbot
+#  - story: introduce_chatbot
+#    steps:
+#      - intent: introduce
+#      - action: utter_introduce
+#
+#  # Câu chuyện tính diện tích từ hình ảnh
+##  - story: calculate_area_from_image
+##    steps:
+##      - intent: ask_for_area_calculation
+##      - intent: upload_image  # Ý định này sẽ kích hoạt khi người dùng tải lên hình ảnh
+##      - action: action_receive_image  # Hành động để xử lý hình ảnh
+###      - action: action_calculate_area  # Tính diện tích sau khi nhận hình ảnh
+##      - action: utter_ask_for_more_info
+#
+#  # Người dùng chào hỏi và giới thiệu về bot
+#  - story: greet_and_introduce
+#    steps:
+#      - intent: greet
+#      - action: utter_greet
+#      - intent: introduce
+#      - action: utter_introduce
+#
+#  # Người dùng yêu cầu tính diện tích
+#  - story: calculate_area
+#    steps:
+#      - intent: ask_for_area_calculation
+#      - action: action_calculate_area
+#      - action: utter_ask_for_more_info
+#
+#  # Người dùng yêu cầu chi phí xây dựng
+#  - story: calculate_building_cost
+#    steps:
+#      - intent: ask_building_cost
+#      - action: action_calculate_building_cost
+#
+#  # Người dùng tải lên hình ảnh bản vẽ để phân tích
+##  - story: upload_image_for_analysis
+##    steps:
+##      - intent: upload_image
+##      - action: action_analyze_image
+##      - action: utter_image_received
+#
+#  # Người dùng hỏi về quy trình xây dựng
+#  - story: ask_about_construction_process
+#    steps:
+#      - intent: ask_construction_process
+#      - action: utter_construction_process
+#
+#  # Người dùng hỏi thông tin liên hệ
+#  - story: ask_contact_info
+#    steps:
+#      - intent: ask_contact_info
+#      - action: utter_contact_info
+#
+#  # Người dùng cảm ơn
+#  - story: thank_user
+#    steps:
+#      - intent: thank
+#      - action: utter_you_are_welcome
+#
+#  # Người dùng hỏi cách sử dụng chatbot
+#  - story: ask_how_to_use
+#    steps:
+#      - intent: ask_how_to_use
+#      - action: utter_how_to_use
+#
+#  # Người dùng gửi phản hồi lỗi
+##  - story: user_error_feedback
+##    steps:
+##      - intent: error_feedback
+##      - action: action_log_error
+##      - action: utter_apology
+#
+#  # Người dùng khẳng định hoặc từ chối (affirm/deny)
+#  - story: user_affirmation_or_denial
+#    steps:
+#      - intent: affirm
+#      - action: utter_affirm
+#
+#  - story: user_denial
+#    steps:
+#      - intent: deny
+#      - action: utter_deny
+#
+#  # Người dùng kết thúc cuộc trò chuyện
+#  - story: user_goodbye
+#    steps:
+#      - intent: goodbye
+#      - action: utter_goodbye

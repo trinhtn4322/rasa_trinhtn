@@ -1,0 +1,13 @@
+recipe: default.v1
+language: en
+pipeline:
+  - name: SingleStepLLMCommandGenerator
+    llm:
+      provider: gemini
+      model: gemini-pro
+      
+
+policies:
+  - name: FlowPolicy
+#  - name: EnterpriseSearchPolicy
+#  - name: RulePolicy
